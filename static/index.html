@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>LocalVendor-Agent</title>
+<link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+<header>
+  <b>LocalVendor-Agent <span class="mut hide-sm">&middot; Autonomous Hyperlocal Supply Chain Negotiator</span></b>
+  <span class="pills"><span class="pill" id="prov">LLM: ...</span><span class="pill" id="wam">WhatsApp: ...</span></span>
+</header>
+
+<main>
+  <section id="c1">
+    <h3>1 &middot; Vendor order</h3>
+    <textarea id="txt" placeholder="Type or speak your order..."></textarea>
+    <div class="row"><button id="mic">Speak (voice)</button><button id="shuf">Shuffle market prices</button></div>
+    <button class="go" id="go">Run agents</button>
+
+    <h3 class="gap">Demo presets</h3>
+    <div id="pre"></div>
+
+    <h3 class="gap">WhatsApp simulator</h3>
+    <p class="mut small">Type as the vendor on WhatsApp. It uses the same handler as the real WhatsApp Cloud API webhook.</p>
+    <div class="row"><input id="simtxt" aria-label="WhatsApp message"><button id="simgo">Send</button></div>
+    <div id="outbox"></div>
+    <button id="obr">Refresh messages</button>
+  </section>
+
+  <section id="c2">
+    <h3>2 &middot; Agent reasoning (live)</h3>
+    <div id="steps"><p class="mut">Pick a preset and press Run.</p></div>
+  </section>
+
+  <section id="c3">
+    <h3>3 &middot; Ranked offers &amp; approval</h3>
+    <div id="out"><p class="mut">Results appear here.</p></div>
+  </section>
+</main>
+
+<section id="metrics" class="wide">
+  <h3>Success metrics</h3>
+  <div id="mt" class="tiles"></div>
+  <button id="st">Run extraction self-test</button>
+  <div id="stout"></div>
+</section>
+
+<script src="/static/app.js"></script>
+</body>
+</html>
